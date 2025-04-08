@@ -1,0 +1,22 @@
+@import url(https://db.onlinewebfonts.com/c/0aee6008b82cde991ec28387169bb13e?family=GD+Sherpa+Regular);
+
+@import "tailwindcss";
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  background: white;
+  font-family: "GD Sherpa Regular", sans-serif;
+}
+
+@theme {
+  /*Colors */
+  --color-custom-green: #00838c;
+  --color-custom-dark-green: #09757a;
+  --color-custom-light-green: #d8efef;
+  --color-custom-black: #111111;
+  --color-white: #ffffff;
+
+  /*CCustom Container Size */
+  --breakpoint-larg: 1366px;
+}
