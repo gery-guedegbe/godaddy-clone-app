@@ -13,7 +13,7 @@ const WordpressContent = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="flex h-1/2 w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:h-full lg:w-1/2"
+        className="flex h-52 w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:h-full lg:w-1/2"
       >
         <h3 className="text-custom-black text-lg font-semibold lg:text-2xl">
           WordPress 9,59 $/mois
@@ -40,7 +40,7 @@ const WordpressContent = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="flex h-1/2 w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:h-full lg:w-1/2"
+        className="flex h-52 w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:h-full lg:w-1/2"
       >
         <div className="text-custom-black flex h-auto w-fit items-center justify-center bg-[#A6FFF8] p-1.5 text-xs font-semibold uppercase">
           Recommandé

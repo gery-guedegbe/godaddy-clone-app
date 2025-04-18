@@ -14,7 +14,7 @@ const DomainContent = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="flex h-full w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:w-1/2"
+        className="flex h-52 w-full cursor-pointer flex-col items-start justify-end gap-2 rounded-lg border-none p-6 duration-300 ease-in-out hover:border-2 hover:border-white hover:shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] lg:h-full lg:w-1/2"
       >
         <h3 className="text-custom-black text-lg font-semibold lg:text-2xl">
           Domaines
@@ -84,7 +84,7 @@ const DomainContent = () => {
       </div>
 
       <div className="flex h-full w-full flex-row items-start gap-4 lg:hidden lg:w-1/2">
-        <div className="bg-custom-gray text-custom-black flex h-1/2 w-full cursor-pointer flex-col items-start justify-between rounded-lg p-6">
+        <div className="bg-custom-gray text-custom-black flex h-40 w-full cursor-pointer flex-col items-start justify-between rounded-lg p-6">
           <button className="text-custom-black flex w-full items-end justify-end text-xl font-medium">
             <GoArrowRight />
           </button>
@@ -94,13 +94,13 @@ const DomainContent = () => {
           </h4>
         </div>
 
-        <div className="bg-custom-gray text-custom-black flex h-1/2 w-full cursor-pointer flex-col items-start justify-between rounded-lg p-6">
+        <div className="bg-custom-gray text-custom-black flex h-40 w-full cursor-pointer flex-col items-start justify-between rounded-lg p-6">
           <button className="text-custom-black flex w-full items-end justify-end text-xl font-medium">
             <GoArrowRight />
           </button>
 
           <h4 className="text-custom-black text-base font-semibold lg:text-lg">
-            .fr à 23,99 $/1re année
+            .fr à 23 $/1re année
           </h4>
         </div>
       </div>

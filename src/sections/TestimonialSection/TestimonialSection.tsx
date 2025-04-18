@@ -4,7 +4,7 @@ import GuideDiv from "./components/GuideDiv";
 
 const TestimonialSection = () => {
   return (
-    <section className="my-8 flex w-full flex-col gap-4 lg:gap-8">
+    <section className="my-8 flex w-full flex-col gap-10">
       <h1 className="text-custom-black font-semiboldl mx-0 flex w-full max-w-full items-center justify-center px-2 text-start text-2xl leading-[130%] font-bold md:text-3xl lg:mx-10 lg:max-w-xl lg:items-start lg:justify-start lg:px-8 lg:text-4xl">
         Nous sommes toujours aux côtés de nos clients.
       </h1>

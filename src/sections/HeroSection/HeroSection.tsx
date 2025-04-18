@@ -1,6 +1,7 @@
 import { useState } from "react";
 import backgroundImage from "../../assets/images/back_image.webp";
 import DynamicButton from "../../components/ui/DynamicButton";
+import { IoArrowForward } from "react-icons/io5";
 
 const HeroSection = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -82,10 +83,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex h-auto w-full flex-col gap-6 lg:h-[80vh] lg:flex-row">
+      <div className="flex h-full w-full flex-col gap-6 lg:h-[80vh] lg:flex-row">
         {/* Left side with background image */}
         <div
-          className="flex w-full flex-col justify-center gap-5 rounded-2xl p-6 lg:w-[60vw] lg:p-8"
+          className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-5 rounded-2xl p-6 text-center lg:w-[60vw] lg:items-start lg:p-8 lg:text-start"
           style={{
             backgroundImage: `url(${backgroundImage})`,
             backgroundSize: "cover",
@@ -117,7 +118,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right side (can add content later) */}
-        <div className="bg-custom-orange flex w-full flex-col items-start gap-3 rounded-2xl p-6 text-start lg:w-[40vw] lg:items-center lg:justify-center lg:gap-5 lg:p-8 lg:text-center">
+        <div className="bg-custom-orange hidden w-full flex-col items-start gap-3 rounded-2xl p-6 text-start lg:flex lg:w-[40vw] lg:items-center lg:justify-center lg:gap-5 lg:p-8 lg:text-center">
           <span className="text-custom-black text-sm font-semibold">
             Websites + Marketing
           </span>
@@ -137,6 +138,25 @@ const HeroSection = () => {
           <span className="text-custom-black text-xs font-light">
             No charge, no obligation, nothing to cancel.**
           </span>
+        </div>
+
+        <div className="bg-custom-black flex w-full items-center justify-between gap-4 rounded-lg p-6 text-start lg:hidden">
+          <div className="space-y-3">
+            <div className="text-custom-black flex h-auto w-12 items-center justify-center bg-[#A6FFF8] p-0.5 text-xs font-semibold">
+              NEW
+            </div>
+
+            <h4 className="text-sm leading-[1.5] font-semibold text-white lg:text-base">
+              AI-suggested domains
+            </h4>
+
+            <p className="max-w-md text-lg leading-[1.5] font-semibold text-white lg:text-xl">
+              Trouvez un nom de domaines ideal pour votre domaine et votre
+              entreprise grace à l'IA.
+            </p>
+          </div>
+
+          <IoArrowForward className="text-3xl font-medium text-white md:text-2xl" />
         </div>
       </div>
     </section>
