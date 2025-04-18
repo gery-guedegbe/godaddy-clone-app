@@ -10,7 +10,7 @@ const ButtonSeConnecter = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <button
         onClick={handleToggled}
         className="hidden cursor-pointer items-center gap-0.5 rounded-md px-2 py-1.5 text-sm font-medium text-white lg:flex"
