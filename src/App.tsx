@@ -7,7 +7,7 @@ import TestimonialSection from "./sections/TestimonialSection/TestimonialSection
 
 const App = () => {
   return (
-    <div className="mx-auto flex min-h-screen w-full flex-col">
+    <div className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col">
       <NavBar />
       <HeroSection />
       <DomainSection />

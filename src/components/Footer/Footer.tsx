@@ -39,22 +39,21 @@ const Footer = () => {
         {/* Bas du footer */}
         <div className="flex w-full flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           {/* Logo + langue/devise */}
-          <div className="w-full">
-            <img
-              src={godaddy_logo}
-              alt="Godaddy Logo"
-              className="h-auto w-24 object-cover md:w-32"
-            />
 
-            <div className="flex w-full items-center justify-between md:justify-center">
-              <span className="not-[]:text-sm flex items-center gap-1 leading-[24px] font-bold text-white md:text-base">
-                France - Français <MdOutlineKeyboardArrowDown />
-              </span>
+          <img
+            src={godaddy_logo}
+            alt="Godaddy Logo"
+            className="h-auto w-24 object-cover md:w-32"
+          />
 
-              <span className="flex items-center gap-1 text-sm leading-[24px] font-bold text-white md:text-base">
-                USD $ <MdOutlineKeyboardArrowDown />
-              </span>
-            </div>
+          <div className="flex w-full items-center justify-between md:justify-center">
+            <span className="flex items-center gap-1 text-sm leading-[24px] font-bold text-white md:text-base">
+              France - Français <MdOutlineKeyboardArrowDown />
+            </span>
+
+            <span className="flex items-center gap-1 text-sm leading-[24px] font-bold text-white md:text-base">
+              USD $ <MdOutlineKeyboardArrowDown />
+            </span>
           </div>
 
           {/* Réseaux sociaux */}
