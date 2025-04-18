@@ -8,9 +8,9 @@ import ButtonSeConnecter from "../ButtonSeConnecter";
 import MobileMenu from "../MobileMenu";
 
 const NavBar = () => {
-  const [activeMenuId, setActiveMenuId] = useState(null);
+  const [activeMenuId, setActiveMenuId] = useState<number | null>(null);
 
-  const handleMenuClick = (menuId, hasSubMenu) => {
+  const handleMenuClick = (menuId: number, hasSubMenu: boolean) => {
     if (!hasSubMenu) return;
     setActiveMenuId((prev) => (prev === menuId ? null : menuId));
   };
@@ -36,7 +36,10 @@ const NavBar = () => {
                 menu={menu}
                 isActive={activeMenuId === menu.id}
                 onClick={() =>
-                  handleMenuClick(menu.id, menu.sections?.length > 0)
+                  handleMenuClick(
+                    menu.id,
+                    !!menu.sections && menu.sections.length > 0,
+                  )
                 }
               />
             ))}

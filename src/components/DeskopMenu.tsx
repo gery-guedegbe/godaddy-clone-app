@@ -1,7 +1,14 @@
+import { Menu } from "../types/menu";
 import { BiChevronDown } from "react-icons/bi";
 
-const DeskopMenu = ({ menu, isActive, onClick }) => {
-  const hasSubMenu = menu?.sections?.length > 0;
+interface DeskopMenuProps {
+  menu: Menu;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+const DeskopMenu: React.FC<DeskopMenuProps> = ({ menu, isActive, onClick }) => {
+  const hasSubMenu = menu.sections && menu.sections.length > 0;
 
   return (
     <li onClick={onClick} className="cursor-pointer">

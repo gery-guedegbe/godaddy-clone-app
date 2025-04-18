@@ -8,18 +8,16 @@ import { IoIosArrowBack } from "react-icons/io";
 
 const MobileMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMenuId, setActiveMenuId] = useState(null);
+  const [activeMenuId, setActiveMenuId] = useState<number | null>(null);
   const [animationKey, setAnimationKey] = useState(0);
 
   const handleMenuOpen = () => {
     setMobileMenuOpen((prev) => !prev);
   };
 
-  const handleMenuClick = (menuId, hasSubMenu) => {
+  const handleMenuClick = (menuId: number, hasSubMenu: boolean) => {
     if (!hasSubMenu) return;
     setActiveMenuId((prev) => (prev === menuId ? null : menuId));
-
-    console.log(menuId);
   };
 
   const activeMenu = Menus.find((menu) => menu.id === activeMenuId);
@@ -53,7 +51,10 @@ const MobileMenu = () => {
               <div
                 key={menu.id}
                 onClick={() =>
-                  handleMenuClick(menu.id, menu.sections?.length > 0)
+                  handleMenuClick(
+                    menu.id,
+                    !!menu.sections && menu.sections.length > 0,
+                  )
                 }
                 className="flex w-full items-center justify-between px-1 py-4"
               >
@@ -61,7 +62,7 @@ const MobileMenu = () => {
                   {menu.name}
                 </span>
 
-                {menu?.sections?.length > 0 && (
+                {!!menu.sections && menu.sections.length > 0 && (
                   <IoArrowForward className="text-xl text-black" />
                 )}
               </div>

@@ -1,7 +1,16 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Menu, MenuItem, MenuSection } from "../types/menu";
 
-const MenuContainer = ({ activeMenu, onClose }) => {
+interface MenuContainerProps {
+  activeMenu: Menu;
+  onClose: () => void;
+}
+
+const MenuContainer: React.FC<MenuContainerProps> = ({
+  activeMenu,
+  onClose,
+}) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
@@ -43,33 +52,35 @@ const MenuContainer = ({ activeMenu, onClose }) => {
                 transition={{ ease: "easeOut", duration: 0.3, delay: 0.3 }}
                 className="grid w-2/3 grid-cols-3 gap-4"
               >
-                {activeMenu.sections?.map((section, index) => (
-                  <li key={index} className="flex flex-col gap-4">
-                    <span className="text-custom-black/50 text-xs font-semibold uppercase">
-                      {section.title}
-                    </span>
+                {activeMenu.sections?.map(
+                  (section: MenuSection, index: number) => (
+                    <li key={index} className="flex flex-col gap-4">
+                      <span className="text-custom-black/50 text-xs font-semibold uppercase">
+                        {section.title}
+                      </span>
 
-                    <div className="w-full space-y-5">
-                      {section.items.map((i) => (
-                        <div
-                          key={i.name}
-                          className="hover:bg-custom-black/5 flex w-full items-center gap-3 rounded-lg p-2"
-                        >
-                          <span className="bg-custom-green/20 text-custom-black flex items-center justify-center rounded-lg p-2 text-xl">
-                            {<i.icon />}
-                          </span>
-
-                          <a
-                            href="#"
-                            className="text-custom-black cursor-pointer text-sm font-medium hover:text-blue-500"
+                      <div className="w-full space-y-5">
+                        {section.items.map((i: MenuItem) => (
+                          <div
+                            key={i.name}
+                            className="hover:bg-custom-black/5 flex w-full items-center gap-3 rounded-lg p-2"
                           >
-                            {i.name}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  </li>
-                ))}
+                            <span className="bg-custom-green/20 text-custom-black flex items-center justify-center rounded-lg p-2 text-xl">
+                              {<i.icon />}
+                            </span>
+
+                            <a
+                              href="#"
+                              className="text-custom-black cursor-pointer text-sm font-medium hover:text-blue-500"
+                            >
+                              {i.name}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </li>
+                  ),
+                )}
               </motion.ul>
             </AnimatePresence>
           </div>
