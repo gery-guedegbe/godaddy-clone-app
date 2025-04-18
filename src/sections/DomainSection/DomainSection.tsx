@@ -41,7 +41,7 @@ const DomainSection = () => {
       </div>
 
       {/* Contenu dynamique */}
-      <div className="h-screen w-full p-4">
+      <div className="h-full w-full p-4 lg:h-screen">
         {tabContents[activeTab as keyof typeof tabContents]}
       </div>
     </section>

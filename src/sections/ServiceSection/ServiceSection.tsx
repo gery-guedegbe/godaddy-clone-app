@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import image_1 from "@/assets/images/img5.jpg";
 import image_2 from "@/assets/images/img14.jpg";
 import image_3 from "@/assets/images/img13.jpg";
+import DynamicButton from "../../components/ui/DynamicButton";
 
 const tabContents = {
   image_1: image_1,
@@ -90,7 +91,7 @@ const ServiceSection = () => {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="flex h-full cursor-pointer flex-col items-start gap-3 rounded-xl p-4 text-start transition-colors duration-300 ease-in-out hover:bg-gray-100"
+                className="bg-custom-light-green/30 flex h-full cursor-pointer flex-col items-start gap-3 rounded-xl p-4 text-start transition-colors duration-300 ease-in-out hover:bg-gray-100"
                 onClick={() => {
                   setHoveredCard(card.id);
                   setSelectedCard(cards.findIndex((c) => c.id === card.id));
@@ -104,6 +105,14 @@ const ServiceSection = () => {
             ))}
           </Carousel>
         </div>
+      </div>
+
+      <div className="mt-6 lg:mt-10">
+        <DynamicButton
+          text="Démarrez gratuitement"
+          bg="custom-black"
+          color="white"
+        />
       </div>
     </div>
   );

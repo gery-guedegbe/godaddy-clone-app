@@ -3,7 +3,7 @@ import logo from "../../assets/logos/godaddy-logo.svg";
 import { Menus } from "../../constant/index";
 import DeskopMenu from "../DeskopMenu";
 import MenuContainer from "../MenuContainer";
-import { BiCart, BiHelpCircle, BiMenu } from "react-icons/bi";
+import { BiCart, BiHelpCircle } from "react-icons/bi";
 import ButtonSeConnecter from "../ButtonSeConnecter";
 import MobileMenu from "../MobileMenu";
 
@@ -13,15 +13,13 @@ const NavBar = () => {
   const handleMenuClick = (menuId, hasSubMenu) => {
     if (!hasSubMenu) return;
     setActiveMenuId((prev) => (prev === menuId ? null : menuId));
-
-    console.log(menuId);
   };
 
   const activeMenu = Menus.find((menu) => menu.id === activeMenuId);
 
   return (
     <header className="bg-custom-black/90 relative w-full text-white">
-      <nav className="flex h-[6vh] items-center justify-between p-2 px-3 lg:h-[10vh] lg:px-12 lg:py-2">
+      <nav className="flex h-[8vh] items-center justify-between p-2 px-3 lg:h-[10vh] lg:px-12 lg:py-2">
         <div className="flex items-center gap-2 lg:gap-3">
           <MobileMenu />
 

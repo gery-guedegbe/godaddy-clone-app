@@ -21,6 +21,7 @@ body {
   --color-custom-orange: #fde9db;
   --color-white: #ffffff;
   --color-custom-gray: #e8eaeb;
+  --color-custom-grey: #bac0c3;
 
   /*CCustom Container Size */
   --breakpoint-larg: 1366px;
