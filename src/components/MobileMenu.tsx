@@ -29,7 +29,7 @@ const MobileMenu = () => {
   }, [activeMenu]);
 
   return (
-    <div className="relative flex xl:hidden">
+    <div className="relative z-50 flex xl:hidden">
       <BiMenu
         onClick={handleMenuOpen}
         className="text-2xl font-semibold text-white lg:text-3xl"

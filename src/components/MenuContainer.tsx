@@ -5,6 +5,15 @@ const MenuContainer = ({ activeMenu, onClose }) => {
   const [animationKey, setAnimationKey] = useState(0);
 
   useEffect(() => {
+    // Lock scroll
+    document.body.style.overflow = "hidden";
+    return () => {
+      // Restore scroll on unmount
+      document.body.style.overflow = "";
+    };
+  }, []);
+
+  useEffect(() => {
     setAnimationKey((prev) => prev + 1);
   }, [activeMenu]);
 
@@ -14,7 +23,7 @@ const MenuContainer = ({ activeMenu, onClose }) => {
     <AnimatePresence>
       <motion.div
         onClick={onClose}
-        className="fixed inset-0 mt-[10vh] hidden h-screen w-full flex-col overflow-hidden bg-black/50 backdrop-blur-md xl:flex"
+        className="fixed inset-0 z-50 mt-[10vh] hidden h-screen w-full flex-col overflow-hidden bg-black/50 backdrop-blur-md xl:flex"
       >
         <motion.div
           initial={{ opacity: 0, y: -100 }}

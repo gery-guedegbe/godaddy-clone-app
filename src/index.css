@@ -10,13 +10,27 @@ body {
 }
 
 @theme {
+  /*Fonts*/
+  --font-time: "Times New Roman", Times, serif;
+
   /*Colors */
   --color-custom-green: #00838c;
   --color-custom-dark-green: #09757a;
   --color-custom-light-green: #d8efef;
   --color-custom-black: #111111;
+  --color-custom-orange: #fde9db;
   --color-white: #ffffff;
+  --color-custom-gray: #e8eaeb;
 
   /*CCustom Container Size */
   --breakpoint-larg: 1366px;
+}
+
+.background_image {
+  width: 100%;
+  height: 100%;
+  background-image: url("../src/assets/images/back_image.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
