@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# 🌐 godaddy-clone-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A pixel-perfect clone of the official landing page of [GoDaddy.com](https://www.godaddy.com/), built using **React**, **TypeScript**, and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+**godaddy-clone-app** est un projet frontend visant à reproduire fidèlement l’interface de la landing page de GoDaddy, un fournisseur de services d’hébergement web et de noms de domaine.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Ce projet met en œuvre les meilleures pratiques de développement moderne avec une attention particulière portée à l'intégration **pixel-perfect**, la **responsiveness** sur tous les écrans, et une architecture de code propre et modulaire.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## Tech Stack
+
+- **React.js** – Librairie JavaScript pour l'interface utilisateur
+- **TypeScript** – Superset de JavaScript typé statiquement
+- **Tailwind CSS** – Framework utilitaire CSS pour un design rapide et responsive
+
+---
+
+## Installation & Lancement local
+
+1. Cloner le dépôt
+
+```bash
+git clone https://github.com/gery-guedegbe/godaddy-clone-app.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Installation des dépendances
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+3. Démarrer le projet
+
+```bash
+npm run dev
+```
+
+Le projet sera disponible à l'adresse http://localhost:5173
+
+## Objectifs pédagogiques
+
+- Approfondir la maîtrise de React et TypeScript
+
+- Pratiquer l'intégration pixel-perfect à partir d'un site réel
+
+- Construire une interface responsive sans framework CSS externe
+
+- Organiser un projet en suivant une architecture évolutive
+
+## ⚠️ Avertissement
+
+Ce projet est strictement éducatif et non commercial.
+Tous les droits de marque, logos, visuels et contenus appartiennent à **GoDaddy** .
+Cette réplique a été réalisée uniquement dans un mais d'apprentissage
+
+## Contact
+
+Tu peux me contacter ici : guedegbe2003@gmail.com
